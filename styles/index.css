@@ -29,8 +29,10 @@ a:hover {
 
 
 /* #Cursor
-================================================== */
+/* ================================================== */
 
+
+/*
 .cursor,
 .cursor2,
 .cursor3 {
@@ -84,10 +86,10 @@ a:hover {
     .cursor3 {
         display: none
     }
-}
+} */
 
 
-/* #Primary style
+/* #Основной стиль
 ================================================== */
 
 .section {
@@ -101,7 +103,7 @@ a:hover {
 }
 
 .full-height {
-    height: 100vh;
+    height: 98vh;
 }
 
 
@@ -153,7 +155,7 @@ a:hover {
 .nav-but-wrap {
     position: relative;
     display: inline-block;
-    float: left;
+    /* float: left; */
     padding-left: 15px;
     padding-top: 15px;
     margin-top: 26px;
@@ -467,12 +469,6 @@ body.nav-active .nav__list-item:nth-child(10) {
     transition: all 300ms linear;
 }
 
-@media screen and (max-width: 580px) {
-    .switch-wrap h1 {
-        font-size: 32px;
-    }
-}
-
 .switch-wrap p {
     font-weight: 600;
     font-size: 14px;
@@ -675,22 +671,6 @@ body.light .switch-wrap p span:nth-child(1):before {
 }
 
 
-/*Сокращение для мобильных устройств*/
-
-@media (max-width: 768px) {
-    .waves {
-        height: 40px;
-        min-height: 40px;
-    }
-    .content {
-        height: 30vh;
-    }
-    h1 {
-        font-size: 24px;
-    }
-}
-
-
 /*Морфинг текста*/
 
 #container {
@@ -717,4 +697,50 @@ body.light .switch-wrap p span:nth-child(1):before {
     font-size: 80pt;
     text-align: center;
     user-select: none;
+}
+
+
+/*МЕДИА ЗАПРОСЫ*/
+
+@media screen and (max-width: 580px) {
+    .switch-wrap h1 {
+        font-size: 32px;
+    }
+    #text1,
+    #text2 {
+        position: absolute;
+        width: 100%;
+        display: inline-block;
+        font-family: 'Raleway', sans-serif;
+        font-size: 5vh;
+        text-align: center;
+        user-select: none;
+    }
+    #container {
+        /* Center the text in the viewport. */
+        position: absolute;
+        margin: 0 auto;
+        width: 48%;
+        height: 80pt;
+        top: 0;
+        bottom: 0;
+        /* This filter is a lot of the magic, try commenting it out to see how the morphing works! */
+        filter: url(#threshold) blur(0.6px);
+    }
+}
+
+
+/*Сокращение волн для мобильных устройств*/
+
+@media (max-width: 768px) {
+    .waves {
+        height: 40px;
+        min-height: 40px;
+    }
+    .content {
+        height: 30vh;
+    }
+    h1 {
+        font-size: 24px;
+    }
 }
