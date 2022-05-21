@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+@import url('https://fonts.googleapis.com/css?family=Raleway:900&display=swap');
 body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
@@ -609,32 +610,111 @@ body.light .switch-wrap p span:nth-child(1):before {
     opacity: 0;
 }
 
-
-/* #Link to page
-================================================== */
-
-
-/* .link-to-portfolio {
-    position: fixed;
-    bottom: 40px;
-    right: 50px;
-    z-index: 200;
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    border-radius: 3px;
-    background-position: center center;
-    background-size: 65%;
-    background-repeat: no-repeat;
-    background-image: url('https://assets.codepen.io/1462889/fcy.png');
-    box-shadow: 0 0 0 2px rgba(255, 255, 255, .1);
-    transition: opacity .2s, border-radius .2s, box-shadow .2s;
-    transition-timing-function: ease-out;
+.waves {
+    position: absolute;
+    /*relative*/
+    bottom: 0%;
+    width: 100%;
+    height: 15vh;
+    margin-bottom: -7px;
+    /*Fix for safari gap*/
+    min-height: 100px;
+    max-height: 150px;
 }
 
-.link-to-portfolio:hover {
-    opacity: 0.8;
-    border-radius: 50%;
-    box-shadow: 0 0 0 20px rgba(255, 255, 255, .1);
+
+/* .content {
+    position: relative;
+    height: 20vh;
+    text-align: center;
+    background-color: white;
 } */
+
+.flexwaves {
+    /*Flexbox for containers*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* Анимация волн */
+
+.parallax>use {
+    animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax>use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.parallax>use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.parallax>use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.parallax>use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+
+/*Сокращение для мобильных устройств*/
+
+@media (max-width: 768px) {
+    .waves {
+        height: 40px;
+        min-height: 40px;
+    }
+    .content {
+        height: 30vh;
+    }
+    h1 {
+        font-size: 24px;
+    }
+}
+
+
+/*Морфинг текста*/
+
+#container {
+    /* Center the text in the viewport. */
+    position: absolute;
+    margin: 0 auto;
+    width: 50%;
+    height: 80pt;
+    top: 0;
+    bottom: 0;
+    /* This filter is a lot of the magic, try commenting it out to see how the morphing works! */
+    filter: url(#threshold) blur(0.6px);
+}
+
+
+/* Your average text styling */
+
+#text1,
+#text2 {
+    position: absolute;
+    width: 100%;
+    display: inline-block;
+    font-family: 'Raleway', sans-serif;
+    font-size: 80pt;
+    text-align: center;
+    user-select: none;
+}

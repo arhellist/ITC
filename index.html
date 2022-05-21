@@ -43,20 +43,70 @@
 
     <div class="section full-height over-hide">
         <div class="switch-wrap">
-            <h1>Invest Time Capital</h1>
+
+
+            <h1>
+
+                <div id="container">
+                    <span id="text1"></span>
+                    <span id="text2"></span>
+                </div>
+
+                <!-- The SVG filter used to create the merging effect -->
+                <svg id="filters">
+                    <defs>
+                        <filter id="threshold">
+                            <!-- Basically just a threshold effect - pixels with a high enough opacity are set to full opacity, and all other pixels are set to completely transparent. -->
+                            <feColorMatrix in="SourceGraphic"
+                                    type="matrix"
+                                    values="1 0 0 0 0
+                                                    0 1 0 0 0
+                                                    0 0 1 0 0
+                                                    0 0 0 255 -140" />
+                        </filter>
+                    </defs>
+                </svg>
+
+            </h1>
+
+
+
             <div id="switch" class="hover-target">
                 <div id="circle"></div>
             </div>
             <p><span>dark</span> - <span>light</span></p>
         </div>
+
+        <!--Waves Container-->
+        <div>
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+<defs>
+<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+</defs>
+<g class="parallax">
+<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+<use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+</g>
+</svg>
+        </div>
+        <!--Waves end-->
+
+
+
     </div>
 
     <div class='cursor' id="cursor"></div>
     <div class='cursor2' id="cursor2"></div>
     <div class='cursor3' id="cursor3"></div>
 
+
+
+
     <script src="./JS/jQwery.js"></script>
     <script src="./JS/index.js"></script>
+    <script src="./JS/MorfingText.js"></script>
 </body>
 
 </html>
