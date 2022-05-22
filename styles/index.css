@@ -412,7 +412,7 @@ body.light .switch-wrap p span:nth-child(1):before {
 
 @media screen and (max-width:480px) {
     #container_nav_menu {
-        opacity: 0;
+        visibility: hidden;
         position: absolute;
     }
     .switch-wrap h1 {
@@ -711,7 +711,7 @@ body.light .switch-wrap p span:nth-child(1):before {
 
 @media screen and (min-width:481px) and (max-width:768px) {
     #container_nav_menu {
-        opacity: 0;
+        visibility: hidden;
         position: absolute;
     }
     .switch-wrap h1 {
@@ -1010,7 +1010,7 @@ body.light .switch-wrap p span:nth-child(1):before {
 
 @media screen and (min-width:769px) and (max-width:1024px) {
     #container_nav_menu {
-        opacity: 0;
+        visibility: hidden;
         position: absolute;
     }
     .switch-wrap h1 {
@@ -1314,7 +1314,7 @@ body.light .switch-wrap p span:nth-child(1):before {
     /*Невидимость бургер меню в десктопной версии*/
     .nav-but-wrap,
     .nav {
-        opacity: 0;
+        visibility: hidden;
     }
     /*==============================================*/
     /* Навигация для десктопных устройств */
@@ -1441,7 +1441,7 @@ body.light .switch-wrap p span:nth-child(1):before {
     /*Невидимость бургер меню в десктопной версии*/
     .nav-but-wrap,
     .nav {
-        opacity: 0;
+        visibility: hidden;
     }
     /*==============================================*/
     /* Навигация для десктопных устройств */
